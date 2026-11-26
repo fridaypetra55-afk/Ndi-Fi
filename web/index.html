@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="ndi:version" content="unreleased" />
+    <meta name="ndi:network" content="testnet" />
+    <title>Ndi-Fi — shared footer preview</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: #f5f8fd;
+        color: #132033;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      }
+
+      header,
+      main {
+        width: min(72rem, 100%);
+        margin-inline: auto;
+        padding: 1.5rem clamp(1rem, 4vw, 2.5rem);
+      }
+
+      main {
+        flex: 1;
+      }
+
+      h1 {
+        margin-bottom: 0.25rem;
+      }
+
+      p {
+        color: #4a5b74;
+      }
+
+      code {
+        background: #e5edf8;
+        padding: 0.1rem 0.35rem;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <header><strong>Ndi-Fi</strong> · component preview</header>
+    <main>
+      <h1>Shared footer</h1>
+      <p>
+        The footer below is the single component used across pages. It reads the version and
+        network from <code>&lt;meta&gt;</code> tags; use the <code>version</code> and
+        <code>network</code> attributes to override them per page.
+      </p>
+      <p>
+        Resize the window below 48rem to see the link groups collapse into accessible
+        <code>&lt;details&gt;</code> sections.
+      </p>
+    </main>
+
+    <ndi-footer base-url="../"></ndi-footer>
+
+    <script type="module" src="./components/footer/ndi-footer.js"></script>
+  </body>
+</html>
